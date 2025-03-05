@@ -1,24 +1,49 @@
+.betu {
+  font-family: "copperplate", fantasy;
+}
 
+.dagadt {
+  font-weight: 900;
+  font-family: "copperplate", fantasy;
+}
+
+.sovany {
+  font-weight: lighter;
+  font-family: "copperplate", fantasy;
+}
+
+body {
+  text-align: center;
+}
 
 .container {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 150px 150px 150px 150px;
-    background-color: ghostwhite;
     padding: 10px;
-    row-gap: 50px;
-    column-gap: 50px;
+    row-gap: 30px;
+    column-gap: 30px;
+    font-family: "copperplate", fantasy;
+    
 }
 
 .container > div {
-    background-color: #f1f1f1;
-    border: 1px solid black;
+    border-radius: 25px;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    background-color: #ffffff;
     padding: 10px;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
+    box-shadow: 10px 10px 7px lightgray;
+    width: 80%;
   }
 
+  
   .item1 {
+    border-top: 2px solid red;
+    width: 60%;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -26,22 +51,38 @@
   }
 
   .item2 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  .item3 {
+    border-top: 2px solid cyan;
+    width: 60%;
     grid-column-start: 0;
     grid-column-end: 1;
     grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-end: 4;
+  }
+
+  .item3 {
+    border-top: 2px solid blue;
+    width: 60%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
   }
 
   .item4 {
+    border-top: 2px solid yellow;
+    width: 60%;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-end: 5;
+  }
+  
+  @media only screen and (min-width: 900px) {
+   /* .item1, .item2, .item3, .item4, body {
+      width: 100%;
+    }*/
+
+    .container{
+      grid-template-columns: auto;
+    }
   }
